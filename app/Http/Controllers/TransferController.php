@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class TransferController extends Controller
 {
@@ -187,20 +188,16 @@ class TransferController extends Controller
                     }
                 }
 
-                // Generate token for international transfer
-                $token = $this->generateToken();
-                $tokenExpiresAt = now()->addMinutes(30);
-
-                // INTERNATIONAL TRANSFER LOGIC
+                // INTERNATIONAL TRANSFER LOGIC - NO TOKEN, JUST PENDING APPROVAL
                 $transactionData = [
                     'transaction_ref' => $transactionRef,
                     'user_id' => $user->id,
                     'type' => 'wire_transfer',
                     'amount' => $amount,
                     'balance_before' => $user->balance,
-                    'balance_after' => $user->balance,
+                    'balance_after' => $user->balance, // Balance remains same until approved
                     'description' => $request->description ?: "Wire transfer to {$request->recipient_name}",
-                    'status' => 'pending_approval',
+                    'status' => 'pending_approval', // Changed from pending_approval to pending_approval
                     'recipient_account_number' => $request->iban,
                     'recipient_name' => $request->recipient_name,
                     'transfer_type' => 'international',
@@ -210,27 +207,21 @@ class TransferController extends Controller
                     'swift_code' => $request->swift_code,
                     'iban' => $request->iban,
                     'intermediary_bank' => $request->intermediary_bank,
-                    // Add token fields
-                    'token' => $token,
-                    'token_expires_at' => $tokenExpiresAt,
+                    // REMOVED: token and token_expires_at fields
                 ];
 
                 Log::info('Creating international transaction', $transactionData);
                 $transaction = Transaction::create($transactionData);
                 Log::info('International transaction created', ['transaction_id' => $transaction->id]);
 
-                // Log the token for demo purposes
-                Log::info('Transfer token generated', [
-                    'transaction_id' => $transaction->id,
-                    'token' => $token,
-                    'expires_at' => $tokenExpiresAt
-                ]);
+                // Send notification to user about pending approval
+                $this->sendTransferPendingNotification($transaction);
 
                 DB::commit();
-                Log::info('INTERNATIONAL transfer processed successfully - redirecting to pending page');
+                Log::info('INTERNATIONAL transfer submitted for admin approval');
 
                 return redirect()->route('transfer.pending', $transaction->id)
-                    ->with('success', 'International transfer submitted. Please enter the verification token to complete.');
+                    ->with('success', 'International transfer submitted for admin approval. You will be notified once it\'s processed.');
             }
 
         } catch (\Exception $e) {
@@ -245,112 +236,40 @@ class TransferController extends Controller
                 'amount' => $amount,
                 'request_data' => $request->all()
             ]);
-            return back()->with('error', 'Transfer failed. Please try again.');
+            return back()->with('error', 'Transfer failed: ' . $e->getMessage());
         }
     }
 
-    // Token verification method (updated for international transfers)
-    public function verifyToken(Request $request, Transaction $transaction)
+    // NEW: Send pending approval notification
+    private function sendTransferPendingNotification($transaction)
     {
-        $request->validate([
-            'token' => 'required|string|size:6'
-        ]);
-
-        $user = Auth::user();
-        $enteredToken = strtoupper($request->token);
-
-        // Check if token matches and is not expired
-        if ($transaction->token === $enteredToken) {
+        try {
+            $user = $transaction->user;
             
-            if ($transaction->token_expires_at && $transaction->token_expires_at->isPast()) {
-                return response()->json([
-                    'success' => false, 
-                    'message' => 'Token has expired. Please request a new one.'
-                ], 422);
-            }
+            Mail::send('emails.transfer-pending', [
+                'transaction' => $transaction,
+                'user' => $user
+            ], function($message) use ($user) {
+                $message->to($user->email)
+                        ->subject('International Transfer Pending Approval - Oarkard Bank');
+            });
 
-            DB::beginTransaction();
-            try {
-                // Update user balance and transfer stats for international transfer
-                $user->decrement('balance', $transaction->amount);
-                $user->updateTransferStats($transaction->amount); // NEW: Update daily transfer stats
-
-                // Update transaction status and clear token
-                $transaction->update([
-                    'status' => 'completed',
-                    'balance_after' => $user->balance,
-                    'token' => null,
-                    'token_expires_at' => null
-                ]);
-
-                DB::commit();
-
-                Log::info('International transfer token verified successfully', [
-                    'transaction_id' => $transaction->id,
-                    'user_id' => $user->id,
-                    'amount' => $transaction->amount
-                ]);
-
-                return response()->json([
-                    'success' => true, 
-                    'message' => 'Transfer completed successfully!',
-                    'redirect_url' => route('transfer.success', $transaction->id)
-                ]);
-
-            } catch (\Exception $e) {
-                DB::rollBack();
-                Log::error('Token verification failed', [
-                    'transaction_id' => $transaction->id,
-                    'error' => $e->getMessage()
-                ]);
-                return response()->json([
-                    'success' => false, 
-                    'message' => 'Transfer failed. Please try again.'
-                ], 500);
-            }
-
-        } else {
-            Log::warning('Invalid token attempt', [
+            Log::info('Transfer pending email sent', [
                 'transaction_id' => $transaction->id,
-                'entered_token' => $enteredToken,
-                'expected_token' => $transaction->token,
-                'user_id' => Auth::id()
+                'user_email' => $user->email
             ]);
 
-            return response()->json([
-                'success' => false, 
-                'message' => 'Invalid token. Please check and try again.'
-            ], 422);
+        } catch (\Exception $e) {
+            Log::error('Failed to send pending email', [
+                'transaction_id' => $transaction->id,
+                'error' => $e->getMessage()
+            ]);
         }
     }
 
-    // Token resend method
-    public function resendToken(Transaction $transaction)
-    {
-        // Generate new token
-        $newToken = $this->generateToken();
-        $newExpiresAt = now()->addMinutes(30);
+    // REMOVED: verifyToken and resendToken methods since we're using admin approval now
 
-        // Update transaction with new token
-        $transaction->update([
-            'token' => $newToken,
-            'token_expires_at' => $newExpiresAt
-        ]);
-
-        Log::info('Token resent', [
-            'transaction_id' => $transaction->id,
-            'new_token' => $newToken,
-            'user_id' => Auth::id()
-        ]);
-
-        return response()->json([
-            'success' => true,
-            'message' => 'New token has been generated. Check your records for the new code.',
-            'token' => $newToken // Remove this in production - only for demo
-        ]);
-    }
-
-    // Helper method to generate tokens
+    // Helper method to generate tokens (keep for potential future use)
     private function generateToken()
     {
         return strtoupper(substr(md5(uniqid(mt_rand(), true)), 0, 6));
@@ -372,6 +291,8 @@ class TransferController extends Controller
             'user_id' => Auth::id(),
             'transaction_status' => $transaction->status
         ]);
+        
+        // Update the pending view to reflect admin approval instead of token
         return view('transfer.pending', compact('transaction'));
     }
 

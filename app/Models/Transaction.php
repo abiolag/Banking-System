@@ -32,7 +32,12 @@ class Transaction extends Model
         'bank_address',
         'intermediary_bank',
         'token',
-        'token_expires_at'
+        'token_expires_at',
+        'approved_by',
+        'approved_at',
+        'rejected_by', 
+        'rejected_at',
+        'rejection_reason',
     ];
 
     protected $casts = [

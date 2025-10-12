@@ -18,6 +18,7 @@ Route::get('/', function () {
 // Google OAuth Routes
 Route::get('/auth/google', [App\Http\Controllers\Auth\GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('/auth/google/callback', [App\Http\Controllers\Auth\GoogleController::class, 'handleGoogleCallback']);
+
 // Password Reset Routes
 Route::get('/forgot-password', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('/forgot-password', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
@@ -33,12 +34,8 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 // Protected Routes (require authentication)
 Route::middleware(['auth'])->group(function () {
-    // Dashboard - USE THE CONTROLLER VERSION (CORRECT ONE)
+    // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // Admin Routes
-    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::post('/admin/credit-user/{userId}', [AdminController::class, 'creditUser'])->name('admin.creditUser');
     
     // Bank Users
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
@@ -49,8 +46,6 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/', [TransferController::class, 'store'])->name('transfer.store');
         Route::get('/success/{transaction}', [TransferController::class, 'success'])->name('transfer.success');
         Route::get('/pending/{transaction}', [TransferController::class, 'pending'])->name('transfer.pending');
-        Route::post('/verify-token/{transaction}', [TransferController::class, 'verifyToken'])->name('transfer.verify-token');
-        Route::post('/resend-token/{transaction}', [TransferController::class, 'resendToken'])->name('transfer.resend-token');
         Route::post('/validate-account', [TransferController::class, 'validateAccount'])->name('transfer.validate');
         Route::post('/exchange-rate', [TransferController::class, 'getExchangeRate'])->name('transfer.exchange-rate');
     });
@@ -65,8 +60,18 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
+
+    // TEMPORARY: Admin Routes without admin middleware
+    Route::prefix('admin')->group(function () {
+        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/pending-transfers', [AdminController::class, 'pendingTransfers'])->name('admin.pending.transfers');
+        Route::post('/credit-user/{userId}', [AdminController::class, 'creditUser'])->name('admin.creditUser');
+        Route::post('/transfers/{transaction}/approve', [AdminController::class, 'approveTransfer'])->name('admin.transfers.approve');
+        Route::post('/transfers/{transaction}/reject', [AdminController::class, 'rejectTransfer'])->name('admin.transfers.reject');
+    });
 });
-// Add to routes/web.php for debugging only
+
+// Debug route (remove in production)
 Route::get('/debug-google', function() {
     return [
         'client_id' => config('services.google.client_id'),

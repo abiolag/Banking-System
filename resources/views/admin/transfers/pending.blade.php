@@ -33,6 +33,9 @@
                 <a class="nav-link active" href="{{ route('admin.pending.transfers') }}">
                     <i class="fas fa-clock"></i> Pending Transfers
                 </a>
+                <a class="nav-link" href="{{ route('dashboard') }}">
+                    <i class="fas fa-arrow-left"></i> Back to User Dashboard
+                </a>
                 <a class="nav-link" href="{{ route('logout') }}" 
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fas fa-sign-out-alt"></i> Logout

@@ -6,7 +6,7 @@
         <div class="col-md-6">
             <div class="card account-card">
                 <div class="card-header bg-primary text-white text-center">
-                    <h4 class="mb-0"><i class="fas fa-university me-2"></i>Arkard Bank Login</h4>
+                    <h4 class="mb-0"><i class="fas fa-university me-2"></i>Oarkard Bank Login</h4>
                 </div>
                 <div class="card-body p-4">
                     <form method="POST" action="{{ route('login') }}">
@@ -39,7 +39,7 @@
             <div class="text-center mt-3">
                 <small class="text-muted">
                     <i class="fas fa-shield-alt me-1"></i>
-                    Your security is our priority. Arkard Bank uses industry-standard encryption.
+                    Your security is our priority. Oarkard Bank uses industry-standard encryption.
                 </small>
             </div>
         </div>

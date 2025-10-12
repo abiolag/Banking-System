@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkard Bank - Secure Banking</title>
+    <title>Oarkard Bank - Secure Banking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -73,7 +73,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bank-header">
         <div class="container">
             <a class="navbar-brand" href="{{ route('dashboard') }}">
-                <i class="fas fa-university me-2"></i>Arkard Bank
+                <i class="fas fa-university me-2"></i>Oarkard Bank
             </a>
             
             <!-- In the navbar section, update the links -->
@@ -111,7 +111,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5>Arkard Bank</h5>
+                    <h5>Oarkard Bank</h5>
                     <p>Secure banking for your financial future.</p>
                 </div>
                 <div class="col-md-4">
@@ -126,14 +126,14 @@
                 <div class="col-md-4">
                     <h5>Contact</h5>
                     <p>
-                        <i class="fas fa-phone me-2"></i>1-800-ARKARD1<br>
-                        <i class="fas fa-envelope me-2"></i>support@arkardbank.com<br>
+                        <i class="fas fa-phone me-2"></i>1-800-Oarkard<br>
+                        <i class="fas fa-envelope me-2"></i>support@Oarkard.com<br>
                         <i class="fas fa-map-marker-alt me-2"></i>123 Financial District, New York, NY
                     </p>
                 </div>
             </div>
             <div class="text-center mt-4">
-                <p>&copy; 2024 Arkard Bank. Member FDIC. All rights reserved.</p>
+                <p>&copy; 2025 Oarkard Bank. Member FDIC. All rights reserved.</p>
             </div>
         </div>
     </footer>

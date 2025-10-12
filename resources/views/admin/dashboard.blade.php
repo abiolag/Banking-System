@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h3>Arkard Bank - Admin Dashboard</h3>
+                    <h3>Oarkard Bank - Admin Dashboard</h3>
                 </div>
 
                 <div class="card-body">

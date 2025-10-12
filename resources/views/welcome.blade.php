@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arkard - Modern Digital Banking</title>
+    <title>Oarkard - Modern Digital Banking</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -81,7 +81,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="fas fa-university me-2"></i>
-                <strong>ARKARD</strong>
+                <strong>OARKARD</strong>
             </a>
             
                     <div class="navbar-nav ms-auto">
@@ -105,7 +105,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="hero-title">Banking Made <span class="text-primary">Simple</span></h1>
-                    <p class="hero-subtitle">Arkard brings you modern digital banking with security, speed, and transparency. Manage your money effortlessly from anywhere.</p>
+                    <p class="hero-subtitle">Oarkard brings you modern digital banking with security, speed, and transparency. Manage your money effortlessly from anywhere.</p>
                     <div class="hero-buttons">
                         @auth
                             <a href="{{ url('/dashboard') }}" class="btn btn-primary btn-lg me-3">Go to Dashboard</a>
@@ -143,7 +143,7 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2>Why Choose Arkard?</h2>
+                <h2>Why Choose Oarkard?</h2>
                 <p class="lead">Experience the future of banking with our innovative features</p>
             </div>
             <div class="row g-4">
@@ -182,7 +182,7 @@
     <section class="py-5 bg-primary text-white">
         <div class="container text-center">
             <h2>Ready to Start Your Banking Journey?</h2>
-            <p class="lead mb-4">Join thousands of satisfied customers who trust Arkard with their finances.</p>
+            <p class="lead mb-4">Join thousands of satisfied customers who trust Oarkard with their finances.</p>
             @auth
                 <a href="{{ url('/dashboard') }}" class="btn btn-light btn-lg">Go to Dashboard</a>
             @else
@@ -195,7 +195,7 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2024 Arkard. All rights reserved.</p>
+            <p>&copy; 2025 Oarkard. All rights reserved.</p>
         </div>
     </footer>
 

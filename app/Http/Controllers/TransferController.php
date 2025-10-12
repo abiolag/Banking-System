@@ -397,7 +397,7 @@ class TransferController extends Controller
             ]);
             return response()->json([
                 'account_name' => $user->name,
-                'bank_name' => 'Arkard Bank'
+                'bank_name' => 'Oarkard Bank'
             ]);
         } else {
             Log::warning('Account validation failed', [

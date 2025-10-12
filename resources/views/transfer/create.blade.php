@@ -47,7 +47,7 @@
                                         <label class="form-check-label fw-bold" for="local_transfer">
                                             <i class="fas fa-users me-2"></i>Local Transfer
                                         </label>
-                                        <small class="text-muted">Transfer to other Arkard Bank users</small>
+                                        <small class="text-muted">Transfer to other Oarkard Bank users</small>
                                     </div>
                                 </div>
                                 <div class="col-md-6">

@@ -155,6 +155,17 @@
                             <button type="submit" class="btn btn-success btn-lg">Open My Account</button>
                         </div>
                     </form>
+                    {{-- Add this at the end of the register form --}}
+                    <div class="text-center my-4">
+                        <div class="border-bottom"></div>
+                        <span class="px-3 bg-white text-muted">Or sign up with</span>
+                    </div>
+
+                    <div class="d-grid">
+                        <a href="{{ route('google.login') }}" class="btn btn-outline-danger">
+                            <i class="fab fa-google me-2"></i> Sign up with Google
+                        </a>
+                    </div>
                     <div class="text-center mt-3">
                         <p>Already have an account? <a href="{{ route('login') }}">Sign in here</a></p>
                     </div>

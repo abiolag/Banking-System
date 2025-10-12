@@ -33,6 +33,8 @@ class User extends Authenticatable
         'max_transaction',
         'daily_transferred',
         'last_transaction_date',
+        'google_id',
+        'avatar',
     ];
 
     protected $hidden = [

@@ -31,6 +31,17 @@
                             <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
                         </div>
                     </form>
+                    {{-- Add this after the regular login form --}}
+                    <div class="text-center my-4">
+                        <div class="border-bottom"></div>
+                        <span class="px-3 bg-white text-muted">Or continue with</span>
+                    </div>
+
+                    <div class="d-grid">
+                        <a href="{{ route('google.login') }}" class="btn btn-outline-danger">
+                            <i class="fab fa-google me-2"></i> Sign in with Google
+                        </a>
+                    </div>
                     <div class="text-center mt-3">
                     @if (Route::has('password.request'))
                         <a class="text-decoration-none" href="{{ route('password.request') }}">

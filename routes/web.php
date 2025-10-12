@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-
+// Google OAuth Routes
+Route::get('/auth/google', [App\Http\Controllers\Auth\GoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('/auth/google/callback', [App\Http\Controllers\Auth\GoogleController::class, 'handleGoogleCallback']);
 // Password Reset Routes
 Route::get('/forgot-password', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('/forgot-password', [App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
@@ -63,4 +65,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
     Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
+});
+// Add to routes/web.php for debugging only
+Route::get('/debug-google', function() {
+    return [
+        'client_id' => config('services.google.client_id'),
+        'client_secret' => !empty(config('services.google.client_secret')),
+        'redirect' => config('services.google.redirect'),
+        'env_client_id' => env('GOOGLE_CLIENT_ID')
+    ];
 });

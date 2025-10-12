@@ -187,4 +187,18 @@ class User extends Authenticatable
     {
         return !$this->is_admin;
     }
+
+    // Add this method to your User model
+    public function updateLastActivity()
+    {
+        $this->update([
+            'last_activity_at' => now(),
+            'last_login_ip' => request()->ip()
+        ]);
+    }
+
+    public function getLastLoginAttribute()
+    {
+        return $this->last_activity_at ? $this->last_activity_at->diffForHumans() : 'Never';
+    }
 }

@@ -88,6 +88,22 @@
                             <td><strong>Used Today:</strong></td>
                             <td>${{ number_format($user->daily_transferred, 2) }}</td>
                         </tr>
+                        <!-- Add this to your Account Details section -->
+                        <tr>
+                            <td><strong>Last Login:</strong></td>
+                            <td>
+                                @if(auth()->user()->last_activity_at)
+                                    {{ auth()->user()->last_activity_at->diffForHumans() }}
+                                    <br><small class="text-muted">from {{ auth()->user()->last_login_ip }}</small>
+                                @else
+                                    <span class="text-muted">Never</span>
+                                @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Session Timeout:</strong></td>
+                            <td><span class="badge bg-warning">30 minutes</span></td>
+                        </tr>
                     </table>
                 </div>
             </div>

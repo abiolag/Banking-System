@@ -22,6 +22,14 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+
+             Auth::user()->update([
+        'last_login_at' => now(),
+        'last_login_ip' => $request->ip(),
+        'last_activity_at' => now()
+        ]);
+
+
             return redirect()->intended('/dashboard');
         }
 

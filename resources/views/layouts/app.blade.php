@@ -140,5 +140,32 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     @yield('scripts')
+    {{-- Session timeout warning --}}
+<script>
+// Show warning 2 minutes before session timeout
+setTimeout(function() {
+    const warningModal = new bootstrap.Modal(document.getElementById('sessionWarningModal'));
+    warningModal.show();
+}, 28 * 60 * 1000); // 28 minutes
+</script>
+
+<!-- Session Warning Modal -->
+<div class="modal fade" id="sessionWarningModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">Session About to Expire</h5>
+            </div>
+            <div class="modal-body">
+                <p>Your session will expire in 2 minutes due to inactivity.</p>
+                <p>Click anywhere to continue your session.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Continue Session</button>
+                <a href="{{ route('logout') }}" class="btn btn-secondary">Logout Now</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -49,6 +49,18 @@
             padding: 12px;
             font-weight: 600;
         }
+        .btn-google {
+            border: 2px solid #db4437;
+            color: #db4437;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-google:hover {
+            background-color: #db4437;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(219, 68, 55, 0.3);
+        }
     </style>
 </head>
 <body>

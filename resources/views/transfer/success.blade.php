@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+    // Additional security check in the view
+    if (Auth::id() !== $transaction->user_id) {
+        abort(403, 'Unauthorized access.');
+    }
+@endphp
+
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -29,7 +36,7 @@
                             </tr>
                             <tr>
                                 <td><strong>Bank:</strong></td>
-                                <td>{{ $transaction->recipient_bank_name }}</td>
+                                <td>{{ $transaction->recipient_bank_name ?? 'Oarkard Bank' }}</td>
                             </tr>
                             <tr>
                                 <td><strong>Date:</strong></td>

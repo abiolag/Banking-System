@@ -43,10 +43,14 @@
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
-                                   name="password" required autocomplete="current-password"
-                                   placeholder="Enter your password">
-
+                            <div class="input-group">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
+                                       name="password" required autocomplete="current-password"
+                                       placeholder="Enter your password">
+                                <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -86,4 +90,44 @@
         </div>
     </div>
 </div>
+
+<script>
+function togglePassword(inputId) {
+    const passwordInput = document.getElementById(inputId);
+    const toggleButton = passwordInput.parentNode.querySelector('button');
+    const icon = toggleButton.querySelector('i');
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+    }
+}
+</script>
+
+<style>
+.input-group .btn-outline-secondary {
+    border-left: 0;
+    border-color: #ced4da;
+    transition: all 0.15s ease-in-out;
+}
+
+.input-group .btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #86b7fe;
+}
+
+.input-group:focus-within .btn-outline-secondary {
+    border-color: #86b7fe;
+}
+</style>
 @endsection

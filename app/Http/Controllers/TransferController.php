@@ -279,8 +279,20 @@ class TransferController extends Controller
     {
         Log::info('Transfer success page accessed', [
             'transaction_id' => $transaction->id,
-            'user_id' => Auth::id()
+            'user_id' => Auth::id(),
+            'transaction_user_id' => $transaction->user_id
         ]);
+
+        // Check if the authenticated user owns this transaction
+        if (Auth::id() !== $transaction->user_id) {
+            Log::warning('Unauthorized access attempt to transfer success page', [
+                'attempted_user_id' => Auth::id(),
+                'transaction_owner_id' => $transaction->user_id,
+                'transaction_id' => $transaction->id
+            ]);
+            abort(403, 'Unauthorized access. You can only view your own transfer details.');
+        }
+
         return view('transfer.success', compact('transaction'));
     }
 
@@ -291,6 +303,16 @@ class TransferController extends Controller
             'user_id' => Auth::id(),
             'transaction_status' => $transaction->status
         ]);
+
+        // Check if the authenticated user owns this transaction
+        if (Auth::id() !== $transaction->user_id) {
+            Log::warning('Unauthorized access attempt to transfer pending page', [
+                'attempted_user_id' => Auth::id(),
+                'transaction_owner_id' => $transaction->user_id,
+                'transaction_id' => $transaction->id
+            ]);
+            abort(403, 'Unauthorized access. You can only view your own transfer details.');
+        }
         
         // Update the pending view to reflect admin approval instead of token
         return view('transfer.pending', compact('transaction'));

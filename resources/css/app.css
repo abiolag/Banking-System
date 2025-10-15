@@ -9,3 +9,40 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Password toggle button styles */
+.input-group {
+    display: flex;
+    align-items: stretch;
+}
+
+.input-group .form-control {
+    flex: 1;
+    border-right: 0;
+}
+
+.input-group .btn-outline-secondary {
+    border-left: 0;
+    border-color: #ced4da;
+    transition: all 0.15s ease-in-out;
+    background-color: white;
+}
+
+.input-group .btn-outline-secondary:hover {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+}
+
+.input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #86b7fe;
+}
+
+.input-group:focus-within .btn-outline-secondary {
+    border-color: #86b7fe;
+}
+
+/* Font Awesome icon alignment */
+.input-group .btn i {
+    width: 1em;
+}

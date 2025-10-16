@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card account-card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header">
                     <h4 class="mb-0"><i class="fas fa-users me-2"></i>Arkard Bank Users</h4>
                 </div>
                 <div class="card-body">

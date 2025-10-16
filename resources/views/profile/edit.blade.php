@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card account-card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header">
                     <h4 class="mb-0"><i class="fas fa-edit me-2"></i>Edit Profile</h4>
                 </div>
                 <div class="card-body">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Oarkard Bank')</title>
+    <title>@yield('title', 'Oarkard - Modern Banking')</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,55 +11,101 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        :root {
+            --primary-green: #00D54B;
+            --dark-green: #00B140;
+            --light-green: #E8F5E8;
+            --dark-text: #1A1A1A;
+        }
+        
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
+        
         .card {
             border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+        
         .card-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 15px 15px 0 0 !important;
+            background: white;
+            border-bottom: 1px solid #EAEAEA;
+            border-radius: 20px 20px 0 0 !important;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
         }
+        
         .card-header h4 {
             margin: 0;
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--dark-text);
+            font-size: 1.5rem;
         }
+        
         .form-control {
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 12px 15px;
-            border: 2px solid #e9ecef;
+            border: 2px solid #EAEAEA;
+            font-size: 1rem;
         }
+        
         .form-control:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 0.2rem rgba(0, 213, 75, 0.25);
         }
+        
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-color: var(--primary-green);
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 12px;
             font-weight: 600;
+            font-size: 1rem;
         }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-green);
+        }
+        
         .btn-google {
-            border: 2px solid #db4437;
-            color: #db4437;
+            border: 2px solid #EAEAEA;
+            color: var(--dark-text);
             font-weight: 600;
+            border-radius: 12px;
+            padding: 12px;
             transition: all 0.3s ease;
+            background: white;
         }
+        
         .btn-google:hover {
-            background-color: #db4437;
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(219, 68, 55, 0.3);
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            transform: translateY(-1px);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #6C757D;
+            margin: 1.5rem 0;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        
+        .divider span {
+            padding: 0 1rem;
+            background: white;
         }
     </style>
 </head>

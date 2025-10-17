@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
 <div class="container py-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -9,32 +7,34 @@
                     <h4 class="mb-0"><i class="fas fa-exchange-alt me-2"></i>Transfer Money</h4>
                 </div>
                 <div class="card-body">
-                    {{-- Error Display --}}
-                    @if($errors->any())
+                    
+                    <?php if($errors->any()): ?>
                         <div class="alert alert-danger">
                             <h5>Please fix the following errors:</h5>
                             <ul>
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
+                                <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <li><?php echo e($error); ?></li>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </ul>
                         </div>
-                    @endif
+                    <?php endif; ?>
 
-                    @if(session('error'))
+                    <?php if(session('error')): ?>
                         <div class="alert alert-danger">
-                            {{ session('error') }}
-                        </div>
-                    @endif
+                            <?php echo e(session('error')); ?>
 
-                    @if(session('success'))
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if(session('success')): ?>
                         <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
+                            <?php echo e(session('success')); ?>
 
-                    <form action="{{ route('transfer.store') }}" method="POST" id="transferForm">
-                        @csrf
+                        </div>
+                    <?php endif; ?>
+
+                    <form action="<?php echo e(route('transfer.store')); ?>" method="POST" id="transferForm">
+                        <?php echo csrf_field(); ?>
 
                         <!-- Transfer Type -->
                         <div class="mb-4">
@@ -71,7 +71,7 @@
                                     <label for="recipient_account_number" class="form-label">Recipient Account Number *</label>
                                     <input type="text" class="form-control" id="recipient_account_number" 
                                         name="recipient_account_number" 
-                                        value="{{ old('recipient_account_number') }}" 
+                                        value="<?php echo e(old('recipient_account_number')); ?>" 
                                         placeholder="Enter account number">
                                 </div>
 
@@ -79,7 +79,7 @@
                             <div class="mb-3">
                                 <label for="recipient_name" class="form-label">Recipient Name *</label>
                                 <input type="text" class="form-control" id="recipient_name" 
-                                       name="recipient_name" value="{{ old('recipient_name') }}" 
+                                       name="recipient_name" value="<?php echo e(old('recipient_name')); ?>" 
                                        placeholder="Recipient name will auto-fill after validation">
                             </div>
                         </div>
@@ -90,7 +90,7 @@
                             <div class="mb-3">
                                 <label for="int_recipient_name" class="form-label">Recipient Name *</label>
                                 <input type="text" class="form-control" id="int_recipient_name" 
-                                       name="recipient_name" value="{{ old('recipient_name') }}" 
+                                       name="recipient_name" value="<?php echo e(old('recipient_name')); ?>" 
                                        placeholder="Enter recipient's full name">
                             </div>
 
@@ -98,7 +98,7 @@
                             <div class="mb-3">
                                 <label for="bank_name" class="form-label">Bank Name *</label>
                                 <input type="text" class="form-control" id="bank_name" 
-                                       name="bank_name" value="{{ old('bank_name') }}" 
+                                       name="bank_name" value="<?php echo e(old('bank_name')); ?>" 
                                        placeholder="Enter recipient's bank name">
                             </div>
 
@@ -106,7 +106,7 @@
                             <div class="mb-3">
                                 <label for="bank_country" class="form-label">Bank Country *</label>
                                 <input type="text" class="form-control" id="bank_country" 
-                                       name="bank_country" value="{{ old('bank_country') }}" 
+                                       name="bank_country" value="<?php echo e(old('bank_country')); ?>" 
                                        placeholder="Enter bank country">
                             </div>
 
@@ -114,14 +114,14 @@
                             <div class="mb-3">
                                 <label for="bank_address" class="form-label">Bank Address *</label>
                                 <textarea class="form-control" id="bank_address" name="bank_address" 
-                                          rows="2" placeholder="Enter bank address">{{ old('bank_address') }}</textarea>
+                                          rows="2" placeholder="Enter bank address"><?php echo e(old('bank_address')); ?></textarea>
                             </div>
 
                             <!-- SWIFT Code -->
                             <div class="mb-3">
                                 <label for="swift_code" class="form-label">SWIFT/BIC Code *</label>
                                 <input type="text" class="form-control" id="swift_code" 
-                                       name="swift_code" value="{{ old('swift_code') }}" 
+                                       name="swift_code" value="<?php echo e(old('swift_code')); ?>" 
                                        placeholder="Enter SWIFT or BIC code">
                             </div>
 
@@ -129,7 +129,7 @@
                             <div class="mb-3">
                                 <label for="iban" class="form-label">IBAN/Account Number *</label>
                                 <input type="text" class="form-control" id="iban" 
-                                       name="iban" value="{{ old('iban') }}" 
+                                       name="iban" value="<?php echo e(old('iban')); ?>" 
                                        placeholder="Enter IBAN or account number">
                             </div>
 
@@ -137,7 +137,7 @@
                             <div class="mb-3">
                                 <label for="intermediary_bank" class="form-label">Intermediary Bank (Optional)</label>
                                 <input type="text" class="form-control" id="intermediary_bank" 
-                                       name="intermediary_bank" value="{{ old('intermediary_bank') }}" 
+                                       name="intermediary_bank" value="<?php echo e(old('intermediary_bank')); ?>" 
                                        placeholder="Enter intermediary bank if required">
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                         <div class="mb-3">
                             <label for="amount" class="form-label">Amount ($) *</label>
                             <input type="number" step="0.01" class="form-control" id="amount" 
-                                   name="amount" value="{{ old('amount') }}" 
+                                   name="amount" value="<?php echo e(old('amount')); ?>" 
                                    min="0.01" placeholder="0.00" required>
                         </div>
 
@@ -155,12 +155,13 @@
                         <div class="mb-3">
                             <label for="description" class="form-label">Description (Optional)</label>
                             <textarea class="form-control" id="description" name="description" 
-                                      rows="2" placeholder="Add a note for this transfer">{{ old('description') }}</textarea>
+                                      rows="2" placeholder="Add a note for this transfer"><?php echo e(old('description')); ?></textarea>
                         </div>
 
                         <!-- Account Balance -->
                         <div class="alert alert-info">
-                            <strong>Your Balance:</strong> {{ Auth::user()->formatted_balance }}
+                            <strong>Your Balance:</strong> <?php echo e(Auth::user()->formatted_balance); ?>
+
                         </div>
 
                         <!-- Submit Button -->
@@ -175,9 +176,9 @@
         </div>
     </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('scripts')
+<?php $__env->startSection('scripts'); ?>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const localFields = document.getElementById('localFields');
@@ -326,11 +327,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         showLoading();
 
-        fetch('{{ route("transfer.validate") }}', {
+        fetch('<?php echo e(route("transfer.validate")); ?>', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                'X-CSRF-TOKEN': '<?php echo e(csrf_token()); ?>'
             },
             body: JSON.stringify({
                 account_number: accountNumber
@@ -438,4 +439,5 @@ document.addEventListener('DOMContentLoaded', function() {
     height: 1rem;
 }
 </style>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\Users\ilesa\Herd\Banking-System\resources\views/transfer/create.blade.php ENDPATH**/ ?>

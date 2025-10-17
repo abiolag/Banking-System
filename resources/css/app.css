@@ -68,3 +68,13 @@
     background-color: #00B140;
     border-color: #00B140;
 }
+/* Smooth transitions for the validation area */
+#recipientInfo {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Better input group styling */
+.input-group .btn-outline-primary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

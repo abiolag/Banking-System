@@ -11,6 +11,7 @@
                 <div class="card-body">
                     <!-- Profile Information Form -->
                     <form method="POST" action="{{ route('profile.update') }}">
+    @csrf
                         @csrf
                         <h5 class="mb-3">Personal Information</h5>
                         <div class="row">
@@ -112,6 +113,7 @@
                     <hr class="my-4">
                     <h5 id="password" class="mb-3">Change Password</h5>
                     <form method="POST" action="{{ route('profile.password') }}">
+    @csrf
                         @csrf
                         <div class="row">
                             <div class="col-md-6">

@@ -26,6 +26,7 @@
 
                     <!-- Regular Login Form -->
                     <form method="POST" action="{{ route('login') }}">
+    @csrf
                         @csrf
 
                         <div class="mb-3">

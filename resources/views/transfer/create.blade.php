@@ -34,6 +34,7 @@
                     @endif
 
                     <form action="{{ route('transfer.store') }}" method="POST" id="transferForm">
+    @csrf
                         @csrf
 
                         <!-- Transfer Type -->

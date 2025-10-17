@@ -21,6 +21,7 @@
                 @auth
                     <a href="{{ url('/dashboard') }}" class="nav-link">Dashboard</a>
                     <form method="POST" action="{{ route('logout') }}" class="d-inline">
+    @csrf
                         @csrf
                         <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
                     </form>

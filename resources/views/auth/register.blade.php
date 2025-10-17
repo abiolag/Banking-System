@@ -26,6 +26,7 @@
 
                     <!-- Regular Registration Form -->
                     <form method="POST" action="{{ route('register') }}">
+    @csrf
                         @csrf
 
                         <div class="mb-3">

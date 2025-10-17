@@ -189,6 +189,7 @@
                     <a class="nav-link" href="{{ route('profile.show') }}">Profile</a>
                     <a class="nav-link" href="{{ route('users.index') }}">Bank Users</a>
                     <form method="POST" action="{{ route('logout') }}" class="d-inline">
+    @csrf
                         @csrf
                         <button type="submit" class="btn btn-outline-primary btn-sm ms-2">Logout</button>
                     </form>

@@ -31,8 +31,8 @@ return [
     | indicate that via the expire_on_close configuration option.
     |
     */
-'lifetime' => 30, // Auto-logout after 30 minutes of inactivity
-'expire_on_close' => true, // Session expires when browser closes
+'lifetime' => env('SESSION_LIFETIME', 120), // Auto-logout after 30 minutes of inactivity
+'expire_on_close' => false, // Session expires when browser closes
 
     /*
     |--------------------------------------------------------------------------
@@ -125,9 +125,10 @@ return [
     |
     */
 
+    
     'cookie' => env(
-        'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'laravel')).'-session'
+    'SESSION_COOKIE',
+    Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
     ),
 
     /*
@@ -154,7 +155,8 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN'),
+    'domain' => env('SESSION_DOMAIN', '.molpsg.com'), // Note the dot
+
 
     /*
     |--------------------------------------------------------------------------
@@ -167,7 +169,8 @@ return [
     |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE'),
+    'secure' => env('SESSION_SECURE_COOKIE', true),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -180,7 +183,8 @@ return [
     |
     */
 
-    'http_only' => env('SESSION_HTTP_ONLY', true),
+    'http_only' => true,
+
 
     /*
     |--------------------------------------------------------------------------
@@ -197,7 +201,7 @@ return [
     |
     */
 
-    'same_site' => env('SESSION_SAME_SITE', 'lax'),
+    'same_site' => 'lax', // Change from 'strict' t
 
     /*
     |--------------------------------------------------------------------------

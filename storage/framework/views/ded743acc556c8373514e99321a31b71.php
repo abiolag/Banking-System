@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-8">
             <div class="card account-card mb-4">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header">
                     <h4 class="mb-0"><i class="fas fa-user me-2"></i>Profile Information</h4>
                 </div>
                 <div class="card-body">
@@ -43,7 +43,7 @@
         <div class="col-md-4">
             <!-- Account Information -->
             <div class="card account-card mb-4">
-                <div class="card-header bg-success text-white">
+                <div class="card-header">
                     <h5 class="mb-0"><i class="fas fa-wallet me-2"></i>Account Details</h5>
                 </div>
                 <div class="card-body">
@@ -56,7 +56,7 @@
 
             <!-- Security -->
             <div class="card account-card">
-                <div class="card-header bg-warning text-dark">
+                <div class="card-header">
                     <h5 class="mb-0"><i class="fas fa-shield-alt me-2"></i>Security</h5>
                 </div>
                 <div class="card-body">

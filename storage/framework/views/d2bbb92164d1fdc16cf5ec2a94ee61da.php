@@ -190,6 +190,7 @@
                     <a class="nav-link" href="<?php echo e(route('profile.show')); ?>">Profile</a>
                     <a class="nav-link" href="<?php echo e(route('users.index')); ?>">Bank Users</a>
                     <form method="POST" action="<?php echo e(route('logout')); ?>" class="d-inline">
+    <?php echo csrf_field(); ?>
                         <?php echo csrf_field(); ?>
                         <button type="submit" class="btn btn-outline-primary btn-sm ms-2">Logout</button>
                     </form>

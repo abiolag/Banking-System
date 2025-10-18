@@ -34,6 +34,7 @@
                     <?php endif; ?>
 
                     <form action="<?php echo e(route('transfer.store')); ?>" method="POST" id="transferForm">
+    <?php echo csrf_field(); ?>
                         <?php echo csrf_field(); ?>
 
                         <!-- Transfer Type -->
@@ -66,18 +67,14 @@
                         <!-- Local Transfer Fields -->
                         <div id="localFields">
                             <!-- Recipient Account Number -->
-                            <div class="mb-3">
-                                <label for="recipient_account_number" class="form-label">Recipient Account Number *</label>
-                                <div class="input-group">
+                           
+                                <div class="mb-3">
+                                    <label for="recipient_account_number" class="form-label">Recipient Account Number *</label>
                                     <input type="text" class="form-control" id="recipient_account_number" 
-                                           name="recipient_account_number" 
-                                           value="<?php echo e(old('recipient_account_number')); ?>" 
-                                           placeholder="Enter account number">
-                                    <button type="button" id="validateAccount" class="btn btn-outline-primary">
-                                        Validate
-                                    </button>
+                                        name="recipient_account_number" 
+                                        value="<?php echo e(old('recipient_account_number')); ?>" 
+                                        placeholder="Enter account number">
                                 </div>
-                            </div>
 
                             <!-- Recipient Name (auto-filled or manual) -->
                             <div class="mb-3">
@@ -192,6 +189,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitBtn = document.getElementById('submitBtn');
     const recipientNameInput = document.getElementById('recipient_name');
     const intRecipientNameInput = document.getElementById('int_recipient_name');
+    const accountNumberInput = document.getElementById('recipient_account_number');
+
+    // Create recipient info display area
+    const recipientInfoDiv = document.createElement('div');
+    recipientInfoDiv.id = 'recipientInfo';
+    recipientInfoDiv.className = 'mt-2';
+    accountNumberInput.parentNode.appendChild(recipientInfoDiv);
 
     // Toggle between local and international fields
     function toggleTransferType() {
@@ -226,6 +230,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('bank_address').required = true;
             document.getElementById('swift_code').required = true;
             document.getElementById('iban').required = true;
+            
+            // Clear recipient info when switching to international
+            clearRecipientInfo();
         }
     }
 
@@ -248,19 +255,78 @@ document.addEventListener('DOMContentLoaded', function() {
     recipientNameInput.addEventListener('input', syncRecipientNames);
     intRecipientNameInput.addEventListener('input', syncRecipientNames);
 
-    // Account validation (only for local transfers)
-    document.getElementById('validateAccount').addEventListener('click', function() {
+    // Display recipient information
+    function displayRecipientInfo(accountName, bankName) {
+        recipientInfoDiv.innerHTML = `
+            <div class="alert alert-success py-2 mb-0">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    <div>
+                        <strong class="d-block">${accountName}</strong>
+                        <small class="text-muted">${bankName}</small>
+                    </div>
+                </div>
+            </div>
+        `;
+        recipientInfoDiv.style.display = 'block';
+    }
+
+    // Display error message
+    function displayError(message) {
+        recipientInfoDiv.innerHTML = `
+            <div class="alert alert-danger py-2 mb-0">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-exclamation-circle text-danger me-2"></i>
+                    <div>
+                        <small class="d-block">${message}</small>
+                    </div>
+                </div>
+            </div>
+        `;
+        recipientInfoDiv.style.display = 'block';
+    }
+
+    // Show loading state
+    function showLoading() {
+        recipientInfoDiv.innerHTML = `
+            <div class="alert alert-info py-2 mb-0">
+                <div class="d-flex align-items-center">
+                    <div class="spinner-border spinner-border-sm me-2" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <small>Validating account...</small>
+                </div>
+            </div>
+        `;
+        recipientInfoDiv.style.display = 'block';
+    }
+
+    // Clear recipient info
+    function clearRecipientInfo() {
+        recipientInfoDiv.innerHTML = '';
+        recipientInfoDiv.style.display = 'none';
+        recipientNameInput.value = '';
+        intRecipientNameInput.value = '';
+    }
+
+    // Account validation function
+    function validateAccount() {
         if (!localRadio.checked) return;
 
-        const accountNumber = document.getElementById('recipient_account_number').value;
+        const accountNumber = accountNumberInput.value.trim();
         
         if (!accountNumber) {
-            alert('Please enter an account number');
+            clearRecipientInfo();
             return;
         }
 
-        this.disabled = true;
-        this.innerHTML = 'Validating...';
+        // Basic account number validation
+        if (accountNumber.length < 8) {
+            displayError('Please enter a valid account number (minimum 8 digits)');
+            return;
+        }
+
+        showLoading();
 
         fetch('<?php echo e(route("transfer.validate")); ?>', {
             method: 'POST',
@@ -272,25 +338,56 @@ document.addEventListener('DOMContentLoaded', function() {
                 account_number: accountNumber
             })
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.account_name) {
+                displayRecipientInfo(data.account_name, data.bank_name);
                 recipientNameInput.value = data.account_name;
                 intRecipientNameInput.value = data.account_name;
-                alert('Account validated successfully!');
             } else if (data.error) {
-                alert(data.error);
+                displayError(data.error);
+                recipientNameInput.value = '';
+                intRecipientNameInput.value = '';
             } else {
-                alert('Account validation failed.');
+                displayError('Account validation failed. Please try again.');
+                recipientNameInput.value = '';
+                intRecipientNameInput.value = '';
             }
         })
         .catch(error => {
-            alert('Validation service temporarily unavailable.');
-        })
-        .finally(() => {
-            this.disabled = false;
-            this.innerHTML = 'Validate';
+            console.error('Validation error:', error);
+            displayError('Validation service temporarily unavailable. Please try again.');
+            recipientNameInput.value = '';
+            intRecipientNameInput.value = '';
         });
+    }
+
+    // Auto-validate on input with debouncing
+    let validationTimeout;
+    accountNumberInput.addEventListener('input', function() {
+        clearTimeout(validationTimeout);
+        const accountNumber = this.value.trim();
+        
+        if (accountNumber.length >= 8) {
+            validationTimeout = setTimeout(validateAccount, 800); // Wait 800ms after typing stops
+        } else if (accountNumber.length === 0) {
+            clearRecipientInfo();
+        } else {
+            clearRecipientInfo();
+            displayError('Please enter a complete account number');
+        }
+    });
+
+    // Clear validation when account number is cleared
+    accountNumberInput.addEventListener('change', function() {
+        if (this.value.trim() === '') {
+            clearRecipientInfo();
+        }
     });
 
     // Form submission confirmation for international transfers
@@ -301,8 +398,47 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
             }
         }
+        
+        // Additional validation for local transfers
+        if (localRadio.checked) {
+            const accountNumber = accountNumberInput.value.trim();
+            const recipientName = recipientNameInput.value.trim();
+            
+            if (!accountNumber || !recipientName) {
+                e.preventDefault();
+                alert('Please validate the recipient account before proceeding.');
+            }
+        }
     });
 });
 </script>
+
+<style>
+#recipientInfo .alert {
+    border-radius: 6px;
+    border-left: 4px solid;
+    margin-bottom: 0;
+}
+
+#recipientInfo .alert-success {
+    border-left-color: #198754;
+    background-color: #f8fff9;
+}
+
+#recipientInfo .alert-danger {
+    border-left-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+#recipientInfo .alert-info {
+    border-left-color: #0dcaf0;
+    background-color: #f8fdff;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+</style>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home2/molpsgco/public_html/oarkard/resources/views/transfer/create.blade.php ENDPATH**/ ?>

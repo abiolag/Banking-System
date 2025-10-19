@@ -289,26 +289,149 @@
                 height: 25px;
             }
         }
+        /* Mobile Responsive Improvements */
+        @media (max-width: 768px) {
+            /* Navigation improvements */
+            .navbar-collapse {
+                background: white;
+                padding: 1rem;
+                border-radius: 12px;
+                margin-top: 1rem;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            }
+            
+            .nav-link {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid #f0f0f0;
+                margin: 0;
+            }
+            
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+            
+            /* Main content padding for mobile */
+            main {
+                padding-top: 70px !important;
+            }
+            
+            /* Button improvements for touch */
+            .btn, .nav-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Card improvements */
+            .card {
+                margin-bottom: 1rem;
+            }
+            
+            .card-header {
+                padding: 1rem;
+            }
+            
+            /* Balance display */
+            .balance-display {
+                font-size: 2rem;
+            }
+            
+            /* Quick actions grid */
+            .quick-action {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Hero section improvements */
+            .hero-title {
+                font-size: 2rem !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            /* Button stacking */
+            .hero-buttons .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-buttons .btn:last-child {
+                margin-bottom: 0;
+            }
+            
+            /* Feature cards */
+            .feature-card {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            /* Form improvements */
+            .form-control {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            /* Table responsiveness */
+            .table-responsive {
+                font-size: 14px;
+            }
+        }
+
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .nav-link:hover {
+                background-color: var(--light-green);
+            }
+            
+            .btn:hover {
+                transform: none;
+            }
+            
+            .quick-action:hover {
+                transform: none;
+            }
+        }
+
+        /* Ensure proper tap targets */
+        .nav-link, .btn {
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
+    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <strong>OARKARD</strong>
-            </a>
-            
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <strong>OARKARD</strong>
+        </a>
+
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
                 @auth
                     <a href="{{ url('/dashboard') }}" class="btn btn-primary">Dashboard</a>
                 @else
                     <a href="{{ route('login') }}" class="nav-link me-3">Login</a>
-                    <a href="{{ route('register') }}" class="btn btn-primary">Open Account</a>
+                    <a href="{{ route('register') }}" class="btn btn-primary mt-2 mt-lg-0">Open Account</a>
                 @endauth
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Hero Slider -->
     <section class="hero-slider">

@@ -437,5 +437,33 @@ document.addEventListener('DOMContentLoaded', function() {
     width: 1rem;
     height: 1rem;
 }
+    /* Form mobile optimization */
+    @media (max-width: 768px) {
+        .form-control, .form-select {
+            font-size: 16px; /* Prevents zoom on iOS */
+            padding: 12px 15px;
+            height: 50px; /* Larger touch target */
+        }
+        
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 16px;
+        }
+        
+        /* Specific improvements for transfer form */
+        #recipient_account_number, #amount, #description {
+            font-size: 16px; /* Prevents iOS zoom */
+        }
+        
+        /* Make buttons more touch-friendly */
+        .btn {
+            min-height: 50px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 </style>
 @endsection

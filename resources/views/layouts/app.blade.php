@@ -168,41 +168,203 @@
         .transaction-item:last-child {
             border-bottom: none;
         }
+        /* Mobile Responsive Improvements */
+    @media (max-width: 768px) {
+        /* Navigation improvements */
+        .navbar-collapse {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin: 0;
+        }
+        
+        .nav-link:last-child {
+            border-bottom: none;
+        }
+        
+        /* Main content padding for mobile */
+        main {
+            padding-top: 70px !important;
+        }
+        
+        /* Button improvements for touch */
+        .btn, .nav-link {
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Card improvements */
+        .card {
+            margin-bottom: 1rem;
+        }
+        
+        .card-header {
+            padding: 1rem;
+        }
+        
+        /* Balance display */
+        .balance-display {
+            font-size: 2rem;
+        }
+        
+        /* Quick actions grid */
+        .quick-action {
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        /* Hero section improvements */
+        .hero-title {
+            font-size: 2rem !important;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        /* Button stacking */
+        .hero-buttons .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-buttons .btn:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Feature cards */
+        .feature-card {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Form improvements */
+        .form-control {
+            font-size: 16px; /* Prevents zoom on iOS */
+        }
+        
+        /* Table responsiveness */
+        .table-responsive {
+            font-size: 14px;
+        }
+    }
+
+    /* Touch-friendly improvements */
+    @media (hover: none) and (pointer: coarse) {
+        .nav-link:hover {
+            background-color: var(--light-green);
+        }
+        
+        .btn:hover {
+            transform: none;
+        }
+        
+        .quick-action:hover {
+            transform: none;
+        }
+    }
+
+    /* Ensure proper tap targets */
+    .nav-link, .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* Form mobile optimization */
+    @media (max-width: 768px) {
+        .form-control, .form-select {
+            font-size: 16px; /* Prevents zoom on iOS */
+            padding: 12px 15px;
+        }
+        
+        .input-group {
+            flex-direction: column;
+        }
+        
+        .input-group .btn {
+            margin-top: 0.5rem;
+            border-radius: 8px !important;
+        }
+        
+        /* Specific form improvements */
+        .form-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Transfer form specific */
+        #recipient_account_number, #amount, #description {
+            font-size: 16px; /* Prevents iOS zoom */
+        }
+    }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <strong>OARKARD</strong>
-            </a>
-            
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <strong>OARKARD</strong>
+        </a>
+
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
             <div class="navbar-nav ms-auto">
                 @auth
-                    <span class="navbar-text me-3">
+                    <span class="navbar-text me-3 d-none d-md-inline">
                         Welcome, {{ Auth::user()->name }}
                     </span>
-                    <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
-                    <a class="nav-link" href="{{ route('transfer.create') }}">Transfer</a>
-                    <a class="nav-link" href="{{ route('transactions') }}">Transactions</a>
-                    <a class="nav-link" href="{{ route('profile.show') }}">Profile</a>
-                    <a class="nav-link" href="{{ route('users.index') }}">Bank Users</a>
+                    <a class="nav-link" href="{{ route('dashboard') }}">
+                        <i class="fas fa-tachometer-alt d-lg-none me-2"></i>Dashboard
+                    </a>
+                    <a class="nav-link" href="{{ route('transfer.create') }}">
+                        <i class="fas fa-exchange-alt d-lg-none me-2"></i>Transfer
+                    </a>
+                    <a class="nav-link" href="{{ route('transactions') }}">
+                        <i class="fas fa-history d-lg-none me-2"></i>Transactions
+                    </a>
+                    <a class="nav-link" href="{{ route('profile.show') }}">
+                        <i class="fas fa-user d-lg-none me-2"></i>Profile
+                    </a>
+                    <a class="nav-link" href="{{ route('users.index') }}">
+                        <i class="fas fa-users d-lg-none me-2"></i>Bank Users
+                    </a>
                     <form method="POST" action="{{ route('logout') }}" class="d-inline">
                         @csrf
-                        <button type="submit" class="btn btn-outline-primary btn-sm ms-2">Logout</button>
+                        <button type="submit" class="btn btn-outline-primary btn-sm ms-2 mt-2 mt-lg-0">
+                            <i class="fas fa-sign-out-alt d-lg-none me-2"></i>Logout
+                        </button>
                     </form>
                 @else
                     <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    <a class="btn btn-primary" href="{{ route('register') }}">Open Account</a>
+                    <a class="btn btn-primary mt-2 mt-lg-0 ms-lg-2" href="{{ route('register') }}">Open Account</a>
                 @endauth
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Main Content -->
-    <main style="padding-top: 80px;">
-        @yield('content')
+    <main style="padding-top: 80px;" class="mobile-content">
+    @yield('content')
     </main>
 
     <!-- Footer -->

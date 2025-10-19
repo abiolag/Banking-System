@@ -43,11 +43,18 @@
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
-                            <div class="input-group">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" 
-                                       name="password" required autocomplete="current-password"
-                                       placeholder="Enter your password">
-                                <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password')">
+                            <div class="position-relative">
+                                <input id="password" type="password" 
+                                    class="form-control password-field @error('password') is-invalid @enderror"
+                                    name="password" 
+                                    required 
+                                    autocomplete="current-password"
+                                    placeholder="Enter your password">
+                                
+                                <!-- Mobile-friendly toggle button -->
+                                <button type="button" 
+                                        class="btn password-toggle-btn"
+                                        onclick="togglePasswordVisibility('password')">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -92,42 +99,122 @@
 </div>
 
 <script>
-function togglePassword(inputId) {
+function togglePasswordVisibility(inputId) {
     const passwordInput = document.getElementById(inputId);
-    const toggleButton = passwordInput.parentNode.querySelector('button');
+    const toggleButton = document.querySelector(`[onclick="togglePasswordVisibility('${inputId}')"]`);
     const icon = toggleButton.querySelector('i');
     
+    // Toggle password visibility
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
         icon.classList.remove('fa-eye');
         icon.classList.add('fa-eye-slash');
+        toggleButton.setAttribute('aria-label', 'Hide password');
     } else {
         passwordInput.type = 'password';
         icon.classList.remove('fa-eye-slash');
         icon.classList.add('fa-eye');
+        toggleButton.setAttribute('aria-label', 'Show password');
     }
+    
+    // Ensure input stays focused (important for mobile)
+    setTimeout(() => {
+        passwordInput.focus();
+    }, 10);
 }
+
+// Add touch event listeners for better mobile support
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordToggle = document.querySelector('.password-toggle-btn');
+    if (passwordToggle) {
+        // Prevent any default touch behaviors that might interfere
+        passwordToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+        
+        passwordToggle.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            const passwordInput = document.getElementById('password');
+            togglePasswordVisibility('password');
+        }, { passive: false });
+    }
+});
 </script>
 
 <style>
-.input-group .btn-outline-secondary {
-    border-left: 0;
-    border-color: #ced4da;
-    transition: all 0.15s ease-in-out;
+/* Password toggle mobile optimization */
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    padding: 8px;
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    border-radius: 6px;
+    transition: all 0.15s ease;
 }
 
-.input-group .btn-outline-secondary:hover {
-    background-color: #e9ecef;
-    border-color: #ced4da;
+.password-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #495057;
 }
 
-.input-group .form-control:focus {
-    box-shadow: none;
-    border-color: #86b7fe;
+.password-field {
+    padding-right: 60px !important;
+    font-size: 16px;
+    height: 50px;
 }
 
-.input-group:focus-within .btn-outline-secondary {
-    border-color: #86b7fe;
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+    .password-field {
+        font-size: 16px !important;
+        height: 50px !important;
+        padding: 12px 15px 12px 15px !important;
+        -webkit-user-select: text !important;
+        user-select: text !important;
+        touch-action: manipulation;
+    }
+    
+    .password-toggle-btn {
+        right: 8px;
+        min-height: 44px;
+        min-width: 44px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #dee2e6;
+    }
+    
+    /* iOS Safari specific fixes */
+    @supports (-webkit-touch-callout: none) {
+        .password-field {
+            font-size: 16px !important;
+            line-height: 1.4 !important;
+        }
+        
+        .password-toggle-btn {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+    }
+}
+
+/* Focus states */
+.password-field:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 213, 75, 0.25);
+    border-color: #00D54B;
+}
+
+.password-field:focus + .password-toggle-btn {
+    border-color: #00D54B;
+    color: #00D54B;
 }
 </style>
 @endsection

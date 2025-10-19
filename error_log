@@ -1,0 +1,334 @@
+[13-Oct-2025 07:32:31 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:32:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:43:09 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:43:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:56:37 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:56:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:56:49 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 07:56:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:04:48 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:04:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:15 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:15 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:15 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:17 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:39 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:05:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[13-Oct-2025 08:18:44 UTC] PHP Fatal error:  Uncaught Error: Class "DB" not found in /home2/molpsgco/public_html/oarkard/test_db_connection.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/test_db_connection.php on line 6
+[14-Oct-2025 23:33:04 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:33:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:33:35 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:33:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:33:48 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:33:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:13 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:57 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:57 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:57 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:34:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:35:03 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[14-Oct-2025 23:35:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:37 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:37 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:37 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:42 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 00:36:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:30 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:30 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:30 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:32 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:40:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:06 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:06 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:06 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:09 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 20:46:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:05 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:05 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:06 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:14 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:22 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:37 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:47 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[15-Oct-2025 23:38:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:15 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:15 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:15 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:37 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:52:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:47 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:47 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:47 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:52 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:58 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:57:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:58:07 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:58:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:58:12 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:58:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:58:19 UTC] PHP Warning:  require(/home2/molpsgco/public_html/oarkard\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[16-Oct-2025 02:58:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/molpsgco/public_html/oarkard\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/molpsgco/public_html/oarkard/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/molpsgco/public_html/oarkard/artisan on line 10
+[19-Oct-2025 12:00:08 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:00:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:00:08 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:00:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:00:15 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:00:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:12:28 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:12:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:13:36 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:13:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:15:17 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:15:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:16:16 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:16:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:16:19 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:16:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:17:46 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:17:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:18:11 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:18:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:19:27 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:19:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:19:27 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:19:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:19:27 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:19:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:21:00 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:21:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:21:01 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:21:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:36:46 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:36:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:36:49 UTC] PHP Warning:  require(/home2/oarkardc/laravel\vendor\autoload.php): Failed to open stream: No such file or directory in /home2/oarkardc/laravel/artisan on line 10
+[19-Oct-2025 12:36:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home2/oarkardc/laravel\vendor\autoload.php' (include_path='.:/opt/alt/php83/usr/share/pear:/opt/alt/php83/usr/share/php:/usr/share/pear:/usr/share/php') in /home2/oarkardc/laravel/artisan:10
+Stack trace:
+#0 {main}
+  thrown in /home2/oarkardc/laravel/artisan on line 10

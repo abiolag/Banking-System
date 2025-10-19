@@ -324,16 +324,6 @@
                         </h1>
                         <p class="hero-subtitle">Introducing <strong>Oarkard Card.</strong><sup>™</sup></p>
                         
-                        <form class="email-form mb-4">
-                            <div class="row g-2">
-                                <div class="col-md-8">
-                                    <input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email">
-                                </div>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary w-100">Get started</button>
-                                </div>
-                            </div>
-                        </form>
 
                         <div class="disclaimer">
                             <p>Oarkard is a financial technology company.</p>
@@ -342,7 +332,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="text-center">
-                            <img src="https://www.citizensbank.com/assets/CB_resources/images/global/learning/hero--woman-looking-at-phone-on-the-street-1600x870.webp" 
+                            <img src="https://www.telegraph.co.uk/content/dam/personal-banking/2023/08/01/TELEMMGLPICT000344583025_16909109249080_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpeg?imwidth=1280" 
                                  alt="Oarkard Banking App" class="img-fluid rounded-3 shadow-lg">
                         </div>
                     </div>
